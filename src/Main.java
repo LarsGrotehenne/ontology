@@ -11,19 +11,10 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
-        /*System.out.println("Hello World!");
+        readRDFXML();
+    }
 
-        Model m = ModelFactory.createDefaultModel();
-
-        String NS = "http://example.com/test/";
-
-        Resource r = m.createResource (NS + "r");
-        Property p = m.createProperty (NS + "p");
-
-        r.addProperty (p, "hello world", XSDDatatype.XSDstring);
-
-        m.write (System.out, "Turtle");*/
-
+    public static void readRDFXML() {
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
 
@@ -39,5 +30,21 @@ public class Main {
 
         // write it to standard out
         model.write(System.out);
+
+    }
+
+    public static void createModel() {
+        System.out.println("Hello World!");
+
+        Model m = ModelFactory.createDefaultModel();
+
+        String NS = "http://example.com/test/";
+
+        Resource r = m.createResource (NS + "r");
+        Property p = m.createProperty (NS + "p");
+
+        r.addProperty (p, "hello world", XSDDatatype.XSDstring);
+
+        m.write (System.out, "Turtle");
     }
 }

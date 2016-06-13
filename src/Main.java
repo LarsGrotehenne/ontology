@@ -1,7 +1,11 @@
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.rdf.model.*;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 public class Main {
+
+    private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
         System.out.println("Hello World!");

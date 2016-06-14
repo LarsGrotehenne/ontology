@@ -16,7 +16,7 @@ public class rdfReader {
      * @param modelLocation location of the rdf file
      * @return model
      */
-    public Model readRDFXML(String modelLocation) {
+    public static Model readRDFXML(String modelLocation) {
         Model model = ModelFactory.createDefaultModel();
 
         // use the FileManager to find the input file
@@ -40,7 +40,7 @@ public class rdfReader {
      * @param modelLocation location of the rdf file
      * @return model
      */
-    public Model readRDFTurtle(String modelLocation) {
+    public static Model readRDFTurtle(String modelLocation) {
 
         return null;
     }

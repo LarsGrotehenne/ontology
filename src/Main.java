@@ -4,6 +4,8 @@ import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileManager;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import rdf.rdfReader;
+import scenarios.ScenarioA;
 
 import java.io.InputStream;
 
@@ -16,9 +18,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        "rdf/test.xml"
         System.out.println("Read RDF XML File");
-        readRDFXML();
+        model = rdfReader.readRDFXML("rdf/test.xml");
         System.out.println("---------------------------------------------");
         System.out.println("Sparql");
         sparqlQuery();

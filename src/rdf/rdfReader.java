@@ -29,9 +29,6 @@ public class rdfReader {
         // read the RDF/XML file
         model.read(in, null);
 
-        // write it to standard out
-        model.write(System.out);
-
         return model;
     }
 

@@ -15,6 +15,8 @@ public class Main {
     public static Model model = ModelFactory.createDefaultModel();
 
     public static void main(String[] args) {
+
+        "rdf/test.xml"
         System.out.println("Read RDF XML File");
         readRDFXML();
         System.out.println("---------------------------------------------");

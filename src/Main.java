@@ -47,10 +47,10 @@ public class Main {
     public static void readRDFXML() {
 
         // use the FileManager to find the input file
-        InputStream in = FileManager.get().open( "test.xml" );
+        InputStream in = FileManager.get().open("rdf/test.xml");
         if (in == null) {
             throw new IllegalArgumentException(
-                    "File: " + "test.xml" + " not found");
+                    "File: " + "rdf/test.xml" + " not found");
         }
 
         // read the RDF/XML file

@@ -1,10 +1,26 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ex: <http://example.org/stuff/1.0/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
 
-<http://www.w3.org/TR/rdf-syntax-grammar>
-  dc:title "RDF/XML Syntax Specification (Revised)" ;
-   ex:editor [
-     ex:fullname "Dave Beckett";
-     ex:homePage <http://purl.org/net/dajobe/>
-   ] .
+<http://somewhere/RebeccaSmith/>
+        vcard:FN  "Becky Smith" ;
+        vcard:N   [ vcard:Family  "Smith" ;
+                    vcard:Given   "Rebecca"
+                  ] .
+
+<http://somewhere/SarahJones/>
+        vcard:FN  "Sarah Jones" ;
+        vcard:N   [ vcard:Family  "Jones" ;
+                    vcard:Given   "Sarah"
+                  ] .
+
+<http://somewhere/JohnSmith/>
+        vcard:FN  "John Smith" ;
+        vcard:N   [ vcard:Family  "Smith" ;
+                    vcard:Given   "John"
+                  ] .
+
+<http://somewhere/MattJones/>
+        vcard:FN  "Matt Jones" ;
+        vcard:N   [ vcard:Family  "Jones" ;
+                    vcard:Given   "Matthew"
+                  ] .

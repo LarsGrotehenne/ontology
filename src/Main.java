@@ -2,6 +2,7 @@ import functionalities.FunctionObject;
 import functionalities.ScenarioA;
 import functionalities.TestScenario;
 import functionalities.WriteModel;
+import helpers.console;
 import org.apache.jena.rdf.model.Model;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -31,7 +32,7 @@ public class Main extends rdfReader {
 
         while (true) {
             printDescriptionString();
-            String function = readLine();
+            String function = console.readLine();
             for (FunctionObject k: functionalities) {
                 if (k.getIdentifier().equals(function)) {
                     k.start();
@@ -57,19 +58,6 @@ public class Main extends rdfReader {
         System.out.println("---------------------------------------------");
         System.out.println(" ");
         System.out.println(" ");
-    }
-
-    public static String readLine()
-    {
-        String s = "";
-        try {
-            InputStreamReader converter = new InputStreamReader(System.in);
-            BufferedReader in = new BufferedReader(converter);
-            s = in.readLine();
-        } catch (Exception e) {
-            System.out.println("Error! Exception: "+e);
-        }
-        return s;
     }
 
     /*public static void createModel() {

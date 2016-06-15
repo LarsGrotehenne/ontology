@@ -30,6 +30,7 @@ public class Main extends rdfReader {
 
     public static void main(String[] args) {
 
+        //main loop to choose functionalities
         while (true) {
             printDescriptionString();
             String function = console.readLine();
@@ -44,6 +45,7 @@ public class Main extends rdfReader {
 
     }
 
+    //prints all descriptions of the different functionalities
     private static void printDescriptionString() {
         System.out.println(" ");
         System.out.println("Folgende Funktionen koennen durch die Eingabe des entsprechenden Namens erreicht werden:");
@@ -54,12 +56,14 @@ public class Main extends rdfReader {
         System.out.println(" ");
     }
 
+    //some end and new lines
     private static void endOfOutput() {
         System.out.println("---------------------------------------------");
         System.out.println(" ");
         System.out.println(" ");
     }
 
+    //old way to creating models without rdf-Files
     /*public static void createModel() {
         System.out.println("Hello World!");
 

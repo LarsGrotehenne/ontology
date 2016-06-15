@@ -16,7 +16,7 @@ public class Main extends rdfReader {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     // read the model from RDF file
-    public static Model model = rdfReader.readRDFXML("rdf/test.xml");
+    public static Model model = rdfReader.readRDFTurtle("rdf/test.ttl");
 
     //create and save functionalities
     public static ArrayList<FunctionObject> functionalities = new ArrayList<FunctionObject>() {

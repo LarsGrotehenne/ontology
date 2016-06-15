@@ -38,8 +38,19 @@ public class rdfReader {
      * @return model
      */
     public static Model readRDFTurtle(String modelLocation) {
+        Model model = ModelFactory.createDefaultModel();
 
-        return null;
+        // use the FileManager to find the input file
+        InputStream in = FileManager.get().open(modelLocation);
+        if (in == null) {
+            throw new IllegalArgumentException(
+                    "File: " + modelLocation + " not found");
+        }
+
+        // read the RDF/XML file
+        model.read(in, null, "TTL");
+
+        return model;
     }
 
 }

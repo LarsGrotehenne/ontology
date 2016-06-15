@@ -8,18 +8,23 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import rdf.rdfReader;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Main extends rdfReader {
 
+    /**
+     * Logger for Jena
+     */
     private static final Logger logger = LogManager.getLogger(Main.class);
 
-    // read the model from RDF file
+    /**
+     * read the model from RDF file
+     */
     public static Model model = rdfReader.readRDFTurtle("rdf/test.ttl");
 
-    //create and save functionalities
+    /**
+     * create and save functionalities
+     */
     public static ArrayList<FunctionObject> functionalities = new ArrayList<FunctionObject>() {
         {
             add(new ScenarioA(model));
@@ -28,6 +33,10 @@ public class Main extends rdfReader {
         }
     };
 
+    /**
+     * Main-Method of the program
+     * @param args
+     */
     public static void main(String[] args) {
 
         //main loop to choose functionalities
@@ -41,11 +50,11 @@ public class Main extends rdfReader {
             }
             endOfOutput();
         }
-
-
     }
 
-    //prints all descriptions of the different functionalities
+    /**
+     * prints all descriptions of the different functionalities
+     */
     private static void printDescriptionString() {
         System.out.println(" ");
         System.out.println("Folgende Funktionen koennen durch die Eingabe des entsprechenden Namens erreicht werden:");
@@ -56,14 +65,18 @@ public class Main extends rdfReader {
         System.out.println(" ");
     }
 
-    //some end and new lines
+    /**
+     * some end and new lines
+     */
     private static void endOfOutput() {
         System.out.println("---------------------------------------------");
         System.out.println(" ");
         System.out.println(" ");
     }
 
-    //old way to creating models without rdf-Files
+    /**
+     * old way to creating models without rdf-Files
+     */
     /*public static void createModel() {
         System.out.println("Hello World!");
 

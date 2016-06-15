@@ -3,70 +3,43 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="541.909090909091" y="0.0">functionalities.FunctionObject</node>
-    <node x="438.0" y="192.0">functionalities.TestScenario</node>
-    <node x="253.0" y="214.5">functionalities.Scenario</node>
-    <node x="685.0" y="192.0">functionalities.WriteModel</node>
-    <node x="239.0" y="362.0">functionalities.ScenarioA</node>
-    <node x="427.0" y="509.0">Main</node>
-    <node x="0.0" y="373.5">rdf.rdfReader</node>
+    <node x="179.0" y="0.0">functionalities.FunctionObject</node>
+    <node x="-38.0" y="-1.0">helpers.console</node>
+    <node x="441.0" y="192.0">functionalities.TestScenario</node>
+    <node x="14.0" y="214.5">functionalities.Scenario</node>
+    <node x="199.0" y="192.0">functionalities.WriteModel</node>
+    <node x="0.0" y="362.0">functionalities.ScenarioA</node>
+    <node x="-327.0" y="122.0">Main</node>
+    <node x="-322.0" y="-2.0">rdf.rdfReader</node>
   </nodes>
   <notes />
   <edges>
     <edge source="functionalities.WriteModel" target="functionalities.FunctionObject">
       <point x="0.0" y="-60.0" />
-      <point x="796.0" y="172.0" />
-      <point x="705.659090909091" y="172.0" />
-      <point x="32.75" y="71.0" />
-    </edge>
-    <edge source="Main" target="functionalities.TestScenario">
-      <point x="0.0" y="-92.5" />
-      <point x="0.0" y="60.0" />
+      <point x="0.0" y="71.0" />
     </edge>
     <edge source="functionalities.ScenarioA" target="functionalities.Scenario">
       <point x="0.0" y="-48.5" />
       <point x="0.0" y="37.5" />
     </edge>
-    <edge source="functionalities.TestScenario" target="functionalities.FunctionObject">
-      <point x="0.0" y="-60.0" />
-      <point x="551.5" y="172.0" />
-      <point x="640.159090909091" y="172.0" />
-      <point x="-32.75" y="71.0" />
-    </edge>
-    <edge source="Main" target="rdf.rdfReader">
-      <point x="-99.60000000000002" y="-92.5" />
-      <point x="451.9" y="489.0" />
-      <point x="109.5" y="489.0" />
-      <point x="0.0" y="37.0" />
-    </edge>
     <edge source="functionalities.Scenario" target="functionalities.FunctionObject">
       <point x="0.0" y="-37.5" />
-      <point x="335.5" y="162.0" />
-      <point x="574.659090909091" y="162.0" />
-      <point x="-98.25" y="71.0" />
+      <point x="96.5" y="167.0" />
+      <point x="222.66666666666669" y="167.0" />
+      <point x="-87.33333333333331" y="71.0" />
     </edge>
-    <edge source="Main" target="functionalities.WriteModel">
-      <point x="49.80000000000001" y="-92.5" />
-      <point x="601.3000000000001" y="479.0" />
-      <point x="796.0" y="479.0" />
-      <point x="0.0" y="60.0" />
+    <edge source="functionalities.TestScenario" target="functionalities.FunctionObject">
+      <point x="0.0" y="-60.0" />
+      <point x="554.5" y="167.0" />
+      <point x="397.3333333333333" y="167.0" />
+      <point x="87.33333333333331" y="71.0" />
     </edge>
-    <edge source="Main" target="functionalities.ScenarioA">
-      <point x="-49.80000000000001" y="-92.5" />
-      <point x="501.70000000000005" y="479.0" />
-      <point x="335.5" y="479.0" />
-      <point x="0.0" y="48.5" />
-    </edge>
-    <edge source="Main" target="functionalities.FunctionObject">
-      <point x="99.60000000000002" y="-92.5" />
-      <point x="651.1" y="489.0" />
-      <point x="917.5" y="489.0" />
-      <point x="917.5" y="162.0" />
-      <point x="771.159090909091" y="162.0" />
-      <point x="98.25" y="71.0" />
+    <edge source="Main" target="rdf.rdfReader">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="37.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="459.0" y="347.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="170.5" y="228.5" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>

@@ -22,7 +22,7 @@ public class D_Literatur extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return "eigenschaften";
+        return "literatur";
     }
 
     @Override

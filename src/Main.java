@@ -1,5 +1,5 @@
 import functionalities.FunctionObject;
-import functionalities.ScenarioA;
+import functionalities.A_Secenario;
 import functionalities.TestScenario;
 import functionalities.WriteModel;
 import helpers.console;
@@ -27,7 +27,7 @@ public class Main extends rdfReader {
      */
     public static ArrayList<FunctionObject> functionalities = new ArrayList<FunctionObject>() {
         {
-            add(new ScenarioA(model));
+            add(new A_Secenario(model));
             add(new WriteModel(model));
             add(new TestScenario(model));
         }

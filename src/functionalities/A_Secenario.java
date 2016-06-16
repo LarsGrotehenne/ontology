@@ -6,9 +6,14 @@ import org.apache.jena.rdf.model.Model;
  * Selektion von einem oder mehreren Clusteringalgorithmen durch das Angeben
  * unterschiedlicher Eigenschaften.
  */
-public class ScenarioA extends Scenario {
-    public ScenarioA(Model _model) {
+public class A_Secenario extends FunctionObject {
+    public A_Secenario(Model _model) {
         super(_model);
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Zurzeit keine Functionalitaeten.");
     }
 
     @Override

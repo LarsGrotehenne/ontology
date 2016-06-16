@@ -28,6 +28,6 @@ public class B_Browsing extends FunctionObject {
 
     @Override
     public String getDescription() {
-        return "Browsen von Clustering-Algorithmen nach Funktionalitaeten";
+        return "Ausgabe von Clustering-Algorithmen zu einer Eigenschaft";
     }
 }

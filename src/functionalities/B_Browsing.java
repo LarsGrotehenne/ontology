@@ -23,11 +23,11 @@ public class B_Browsing extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return null;
+        return "browsing";
     }
 
     @Override
     public String getDescription() {
-        return null;
+        return "Browsen von Clustering-Algorithmen nach Funktionalitaeten";
     }
 }

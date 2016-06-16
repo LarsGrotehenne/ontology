@@ -22,11 +22,11 @@ public class C_Eigenschaften extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return null;
+        return "eigenschaften";
     }
 
     @Override
     public String getDescription() {
-        return null;
+        return "Ausgabe der Eigenschaften zu einem oder mehreren Clustering-Algorithmus";
     }
 }

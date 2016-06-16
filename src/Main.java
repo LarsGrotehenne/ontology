@@ -1,7 +1,4 @@
-import functionalities.FunctionObject;
-import functionalities.A_Secenario;
-import functionalities.TestScenario;
-import functionalities.WriteModel;
+import functionalities.*;
 import helpers.console;
 import org.apache.jena.rdf.model.Model;
 import org.apache.log4j.LogManager;
@@ -27,7 +24,10 @@ public class Main extends rdfReader {
      */
     public static ArrayList<FunctionObject> functionalities = new ArrayList<FunctionObject>() {
         {
-            add(new A_Secenario(model));
+            add(new A_Scenario(model));
+            add(new B_Browsing(model));
+            add(new C_Eigenschaften(model));
+            add(new D_Literatur(model));
             add(new WriteModel(model));
             add(new TestScenario(model));
         }

@@ -22,11 +22,11 @@ public class D_Literatur extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return null;
+        return "eigenschaften";
     }
 
     @Override
     public String getDescription() {
-        return null;
+        return "Ausgabe der Literatur zu einem oder mehreren Clustering-Algorithmen";
     }
 }

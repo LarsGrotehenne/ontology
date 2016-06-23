@@ -1,0 +1,50 @@
+typ: Dichte-basiert
+DBSCAN:
+paper: https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf
+blackhole
+paper: http://link.springer.com/chapter/10.1007/978-3-319-09259-1_6
+meanshift
+paper: http://www.loria.fr/~berger/Enseignement/Master2/Exposes/meanShiftCluster.pdf
+       http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1055330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1055330
+
+
+typ: Connectivity-based clustering (hierarchical clustering)
+single-linkage
+average-linkage
+full-linkage
+paper: http://www.jstor.org/stable/2346439?seq=1#page_scan_tab_contents
+CURE
+paper: http://www.cs.bu.edu/fac/gkollios/ada05/LectNotes/guha98cure.pdf
+
+
+typ: Centroid-based clustering
+K-means
+paper: http://www.jstor.org/stable/2346830?seq=1#page_scan_tab_contents
+
+
+typ: Distribution-based clustering
+EM
+paper: http://web.mit.edu/6.435/www/Dempster77.pdf
+
+
+typ: subspace
+CLIQUE
+paper: http://www.cs.cornell.edu/johannes/papers/1998/sigmod1998-clique.pdf
+kann viele dimensionen besser
+
+
+weitere:
+----
+spectral
+paper: http://ai.stanford.edu/~ang/papers/nips01-spectral.pdf
+----
+agglomerative
+----
+message_based:
+affinity propagation
+paper: http://science.sciencemag.org/content/315/5814/972
+       http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.228.3290&rep=rep1&type=pdf
+----
+ward
+----
+birch

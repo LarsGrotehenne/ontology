@@ -17,7 +17,7 @@ public class Main extends rdfReader {
     /**
      * read the model from RDF file
      */
-    public static Model model = rdfReader.readRDFTurtle("rdf/test.ttl");
+    public static Model model = rdfReader.readRDFTurtle("rdf/cluster.ttl");
 
     /**
      * create and save functionalities

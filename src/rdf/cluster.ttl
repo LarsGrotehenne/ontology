@@ -31,6 +31,7 @@
 
 :alg1   :described_in   :paper1;
         rdfs:label      "DBScan";
+        :handle_noise   true;
         :speed          "normal";
         a               :Density-based,
                         :Algorithm.
@@ -48,6 +49,7 @@
                         :paper4;
         rdfs:label      "Meanshift";
         :speed          "fast";
+        :multi_dim      true;
         a               :Density-based,
                         :Algorithm.
 

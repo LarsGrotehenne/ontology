@@ -115,6 +115,18 @@
         a               :Delauney-based,
                         :Algorithm.
 
+:alg13  :described_in   :paper14,
+                        :paper15;
+        rdfs:label      "AffinityPropagation";
+        :speed          "fast";
+        a               :Algorithm.
+
+:alg14  :described:in   :paper16;
+        rdfs:label      "Agglomerative";
+        :multi_dim      true;
+        :take_parameter  "None";
+        a               :Algorithm.
+
 :paper1     a               :Paper;
             dc:source       "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf";
             dc:title        "A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise".
@@ -244,3 +256,37 @@
                              and disadvantages against other algorithms based on delauny-
                              triangulation.""".
             #dc:author      :person
+
+:paper14    a               :Paper;
+            dc:source       "http://science.sciencemag.org/content/315/5814/972.short";
+            dc:title        "Clustering by Passing Messages Between Data Points";
+            dc:description  """Clustering data by identifying a subset of representative examples is important
+                            for processing sensory signals and detecting patterns in data.
+                            Such “exemplars” can be found by randomly choosing an initial subset
+                            of data points and then iteratively refining it, but this works well
+                            only if that initial choice is close to a good solution. We devised a
+                            method called “affinity propagation,” which takes as input measures of
+                            similarity between pairs of data points. Real-valued messages are exchanged
+                            between data points until a high-quality set of exemplars and corresponding
+                            clusters gradually emerges. We used affinity propagation to cluster images of
+                            faces, detect genes in microarray data, identify representative sentences in
+                            this manuscript, and identify cities that are efficiently accessed by airline
+                            travel. Affinity propagation found clusters with much lower error than other
+                            methods, and it did so in less than one-hundredth the amount of time.""".
+
+:paper15    a               :Paper;
+            dc:source       "http://arxiv.org/pdf/0805.1096v1.pdf";
+            dc:title        "Adaptive Affinity Propagation Clustering".
+
+:paper16    a               :Paper;
+            dc:source       "http://www.sciencedirect.com/science/article/pii/0031320378900183";
+            dc:title        "Agglomerative clustering using the concept of mutual nearest neighbourhood";
+            dc:description  """A method for determining the mutual nearest neighbours (MNN) and
+                            mutual neighbourhood value (mnv) of a sample point, using the conventional
+                            nearest neighbours, is suggested. A nonparametric, hierarchical,
+                            agglomerative clustering algorithm is developed using the above concepts.
+                            The algorithm is simple, deterministic, noniterative, requires low storage
+                            and is able to discern spherical and nonspherical clusters. The method is
+                            applicable to a wide class of data of arbitrary shape, large size and high
+                            dimensionality. The algorithm can discern mutually homogenous clusters.
+                            Strong or weak patterns can be discerned by properly choosing the neighbourhood width.""".

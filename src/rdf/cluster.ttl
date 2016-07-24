@@ -72,6 +72,7 @@
 
 :alg7   :described_in   :paper8;
         rdfs:label      "CLIQUE";
+        :multi_dim       true;
         a               :Subspace-based,
                         :Algorithm.
 
@@ -116,22 +117,32 @@
 
 :paper1     a               :Paper;
             dc:source       "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf";
-            dc:title        "Das dolle DBScan";
-            dc:description  "Ein langer Text".
+            dc:title        "A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise".
+            #dc:description  "Abstract sehr lang...".
+            # year          1996
 
 :paper2     a			    :Paper;
             dc:source       "http://link.springer.com/chapter/10.1007/978-3-319-09259-1_6";
-            dc:title        "Mehr zu Black Hole Clustering".
+            dc:title        "Density Based Clustering: Alternatives to DBSCAN".
 
 :paper3     a               :Paper;
             dc:source       "http://www.loria.fr/~berger/Enseignement/Master2/Exposes/meanShiftCluster.pdf";
-            dc:title        "Das dolle Meanshift";
-            dc:description  "Ein langer Text".
+            dc:title        "Mean Shift, Mode Seeking, and Clustering".
+            #dc:description  "Ein langer Text".
+            # year          1995
 
 :paper4     a               :Paper;
             dc:source       "http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1055330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1055330";
-            dc:title        "Mehr zu Meanshift";
-            dc:description  "Ein langer Text".
+            dc:title        "The estimation of the gradient of a density function, with applications in pattern recognition";
+            dc:description  """Nonparametric density gradient estimation using a generalized kernel approach
+                            is investigated. Conditions on the kernel functions are derived to guarantee
+                            asymptotic unbiasedness, consistency, and uniform consistency of the estimates.
+                            The results are generalized to obtain a simple mcan-shift estimate that can be
+                            extended in a k-nearest-neighbor approach. Applications of gradient estimation
+                            to pattern recognition are presented using clustering and intrinsic dimensionality
+                            problems, with the ultimate goal of providing further understanding of these
+                            problems in terms of density gradients.""".
+            # year          1975
 
 :paper5     a               :Paper;
             dc:source       "http://www.jstor.org/stable/2346439?seq=1#page_scan_tab_contents";
@@ -141,21 +152,34 @@
 
 :paper6     a               :Paper;
             dc:source       "http://www.jstor.org/stable/2346830?seq=1#page_scan_tab_contents";
-            dc:title        "K-Means...";
-            dc:description  "Ein Text".
+            dc:title        "A K-Means Clustering Algorithm".
+            #dc:description  "Ein Text".
             #dc:author      :person.
+            # year          1979
 
 :paper7     a               :Paper;
             dc:source       "http://web.mit.edu/6.435/www/Dempster77.pdf";
-            dc:title        "EM...";
-            dc:description  "Ein Text".
+            dc:title        "Maximum Likelihood from Incomplete Data via the EM Algorithm ".
+            #dc:description  "Ein Text".
             #dc:author      :person.
+            # year          1976
 
 :paper8     a               :Paper;
             dc:source       "http://www.cs.cornell.edu/johannes/papers/1998/sigmod1998-clique.pdf";
-            dc:title        "CLIQUE...";
-            dc:description  "Ein Text".
+            dc:title        "Automatic Subspace Clustering of High Dimensional Data for Data Mining Applications";
+            dc:description  """Data mining applications place special requirements on clustering algorithms including:
+                            the ability to find clusters embedded in subspaces of high dimensional data,
+                            scalability , end-user comprehensibility of the results, non-presumption of any canonical
+                            data distribution, and insensitivity to the order of input records.
+                            We present CLIQUE, a clustering algorithm that satisfies each of these requirements.
+                            CLIQUE identifies dense clusters in subspaces of maximum dimensionality.
+                            It generates cluster descriptions in the form of DNF expressions that are minimized for
+                            ease of comprehension. It produces identical results irrespective of the order in which
+                            input records are presented and does not presume any specific mathematical form for data
+                            distribution. Through experiments, we show that CLIQUE efficiently finds accurate clusters
+                            in large high dimensional datasets.""".
             #dc:author      :person.
+            #year           1998
 
 :paper9     a               :Paper;
             dc:source       "10.1.1.127.2191.pdf";
@@ -192,7 +216,7 @@
                              noise. Experiments on both simulated and real-world spatial databases (i.e. an earthquake dataset in
                              China) are utilized to demonstrate the effectiveness and advantages of the ASCDT algorithm.""".
             #dc:author      :person
-            #year?          2011
+            # year          2011
 
 :paper12    a               :Paper;
             dc:source       "1-s2.0-S0167865508000500-main.pdf";

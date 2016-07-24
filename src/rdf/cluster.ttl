@@ -8,45 +8,213 @@
 # project references as well as turtle templates. If in doubt, have a look at
 # https://github.com/AKSW/Xturtle/wiki/Usage
 
-:described_in a rdf:predicate.
+:described_in   a   rdf:predicate.
+:also_called    a   rdf:predicate.
+:refines        a   rdf:predicate.
+:take_parameter a   rdf:predicate.
+:handle_noise   a   rdf:predicate.
+:multi_dim      a   rdf:predicate. # more than 2
+:speed          a   rdf:predicate.
 
 :Algorithm a rdfs:Class.
 
-:Density-based a rdfs:Class.
+:Density-based      a       rdfs:Class.
+:Delaunay-based     a       :Density-based.
+:Centroid-based     a       rdfs:Class.
+:Connectivity-based a       rdfs:Class.
+:Hierachical        a       :Connectivity-based. # synonym to connectivity...
+:Distribution-based a       rdfs:Class.
+:Subspace-based     a       rdfs:Class.
 
 :Paper a rdfs:Class.
 
+
 :alg1   :described_in   :paper1;
         rdfs:label      "DBScan";
+        :speed          "normal";
         a               :Density-based,
                         :Algorithm.
 
 :alg2   :described_in   :paper2;
         rdfs:label      "BlackHole";
+        :take_parameter "None";
+        :handle_noise   false;
+        :multi_dim      true;
+        :speed          "very fast";
         a               :Density-based,
                         :Algorithm.
 
 :alg3   :described_in   :paper3,
                         :paper4;
         rdfs:label      "Meanshift";
+        :speed          "fast";
         a               :Density-based,
                         :Algorithm.
 
-:paper1 a               :Paper;
-        dc:source       "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf";
-        dc:title        "Das dolle DBScan";
-        dc:description  "Ein langer Text".
+:alg4   :described_in   :paper5;
+        rdfs:label      "Single-Linkage";
+        :speed          "slow";
+        a               :Hierarchical,
+                        :Algorithm.
 
-:paper2 a			    :Paper;
-        dc:source       "http://link.springer.com/chapter/10.1007/978-3-319-09259-1_6";
-        dc:title        "Mehr zu Black Hole Clustering".
+:alg5   :described_in   :paper6;
+        rdfs:label      "K-Means";
+        a               :Centroid-based,
+                        :Algorithm.
 
-:paper3 a               :Paper;
-        dc:source       "http://www.loria.fr/~berger/Enseignement/Master2/Exposes/meanShiftCluster.pdf";
-        dc:title        "Das dolle Meanshift";
-        dc:description  "Ein langer Text".
+:alg6   :described_in   :paper7;
+        rdfs:label      "EM";
+        :also_called    "Expectation-Maximization";
+        a               :Distribution-based,
+                        :Algorithm.
 
-:paper4 a               :Paper;
-        dc:source       "http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1055330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1055330";
-        dc:title        "Mehr zu Meanshift";
-        dc:description  "Ein langer Text".
+:alg7   :described_in   :paper8;
+        rdfs:label      "CLIQUE";
+        a               :Subspace-based,
+                        :Algorithm.
+
+:alg8   :described_in   :paper9;
+        rdfs:label      "AMOEBA";
+        :speed          "slow";
+        a               :Delauney-based,
+                        :Algorithm.
+
+:alg9   :described_in   :paper10;
+        rdfs:label      "AUTOCLUST";
+        :refines        :alg8;
+        :take_parameter "None";
+        :handle_noise   true;
+        :speed          "very slow";
+        a               :Delauney-based,
+                        :Algorithm.
+
+:alg10  :described_in   :paper11;
+        rdfs:label      "ASCDT";
+        :refines        :alg8;
+        :handle_noise   true;
+        a               :Delauney-based,
+                        :Algorithm.
+
+:alg11  :described_in   :paper12;
+        rdfs:label      "TRICLUST";
+        :refines        :alg8;
+        :speed          "slow";
+        :handle_noise   true;
+        a               :Delauney-based,
+                        :Algorithm.
+
+:alg12  :described_in   :paper13;
+        rdfs:label      "SpeeTriC";
+        :take_parameter "None";
+        :handle_noise   false;
+        :multi_dim      true;
+        :speed          "very fast";
+        a               :Delauney-based,
+                        :Algorithm.
+
+:paper1     a               :Paper;
+            dc:source       "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf";
+            dc:title        "Das dolle DBScan";
+            dc:description  "Ein langer Text".
+
+:paper2     a			    :Paper;
+            dc:source       "http://link.springer.com/chapter/10.1007/978-3-319-09259-1_6";
+            dc:title        "Mehr zu Black Hole Clustering".
+
+:paper3     a               :Paper;
+            dc:source       "http://www.loria.fr/~berger/Enseignement/Master2/Exposes/meanShiftCluster.pdf";
+            dc:title        "Das dolle Meanshift";
+            dc:description  "Ein langer Text".
+
+:paper4     a               :Paper;
+            dc:source       "http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1055330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1055330";
+            dc:title        "Mehr zu Meanshift";
+            dc:description  "Ein langer Text".
+
+:paper5     a               :Paper;
+            dc:source       "http://www.jstor.org/stable/2346439?seq=1#page_scan_tab_contents";
+            dc:title        "single linkage...";
+            dc:description  "Ein Text".
+            #dc:author      :person.
+
+:paper6     a               :Paper;
+            dc:source       "http://www.jstor.org/stable/2346830?seq=1#page_scan_tab_contents";
+            dc:title        "K-Means...";
+            dc:description  "Ein Text".
+            #dc:author      :person.
+
+:paper7     a               :Paper;
+            dc:source       "http://web.mit.edu/6.435/www/Dempster77.pdf";
+            dc:title        "EM...";
+            dc:description  "Ein Text".
+            #dc:author      :person.
+
+:paper8     a               :Paper;
+            dc:source       "http://www.cs.cornell.edu/johannes/papers/1998/sigmod1998-clique.pdf";
+            dc:title        "CLIQUE...";
+            dc:description  "Ein Text".
+            #dc:author      :person.
+
+:paper9     a               :Paper;
+            dc:source       "10.1.1.127.2191.pdf";
+            dc:title        "AMOEBA: HIERARCHICAL CLUSTERING BASED ON SPATIAL PROXIMITY USING DELAUNATY DIAGRAM";
+            dc:description  """Exploratory data analysis is increasingly more necessary as larger spatial data is managed
+                             in electro-magnetic media. We propose an exploratory method that reveals a robust
+                             clustering hierarchy. Our approach uses the Delaunay diagram to incorporate spatial
+                             proximity. It does not require any prior knowledge about the data set, nor does it require
+                             parameters from the user. Multi-level clusters are successfully discovered by this new
+                             method in only O(nlogn) time, where n is the size of the data set. The efficiency of our
+                             methods allows us to construct and display a new type of tree graph that facilitates
+                             understanding of the complex hierarchy of clusters. We show that clustering methods that
+                             adopt a raster-like or vector-like representation of proximity are not appropriate for spatial
+                             clustering. We conduct an experimental evaluation with synthetic data sets as well as real
+                             data sets to illustrate the robustness of our method.""".
+            #dc:author      :person
+            #keywords       clustering, data mining, exploratory spatial analysis, Delaunay diagram
+
+:paper10    a               :Paper;
+            dc:source       "10.1.1.35.4741.pdf";
+            dc:title        "AUTOCLUST: Automatic Clustering via Boundary Extraction for Mining Massive Point-Data Sets".
+            #dc:description  "Ein Text"
+            #dc:author      :person
+
+:paper11    a               :Paper;
+            dc:source       "1-s2.0-S019897151100024X-main.pdf";
+            dc:title        "An adaptive spatial clustering algorithm based on delaunay triangulation";
+            dc:description  """In this paper, an adaptive spatial clustering algorithm based on Delaunay triangulation (ASCDT for short)
+                             is proposed. The ASCDT algorithm employs both statistical features of the edges of Delaunay triangulation
+                             and a novel spatial proximity definition based upon Delaunay triangulation to detect spatial clusters.
+                             Normally, this algorithm can automatically discover clusters of complicated shapes, and non-homoge-
+                             neous densities in a spatial database, without the need to set parameters or prior knowledge. The user
+                             can also modify the parameter to fit with special applications. In addition, the algorithm is robust to
+                             noise. Experiments on both simulated and real-world spatial databases (i.e. an earthquake dataset in
+                             China) are utilized to demonstrate the effectiveness and advantages of the ASCDT algorithm.""".
+            #dc:author      :person
+            #year?          2011
+
+:paper12    a               :Paper;
+            dc:source       "1-s2.0-S0167865508000500-main.pdf";
+            dc:title        "Effective clustering and boundary detection algorithm based on Delaunay triangulation";
+            dc:description  """In this paper, a new spatial clustering algorithm TRICLUST based on Delaunay triangulation is proposed. This algorithm treats
+                             clustering task by analyzing statistical features of data. For each data point, its values of statistical features are extracted from its neigh-
+                             borhood which effectively models the data proximity. By applying specifically built criteria function, TRICLUST is able to effectively
+                             handle data set with clusters of complex shapes and non-uniform densities, and with large amount of noises. One additional advantage
+                             of TRICLUST is the boundary detection function which is valuable for many real world applications such as geo-spatial data processing,
+                             point-based computer graphics, etc.""".
+            #dc:author      :person
+
+:paper13    a               :Paper;
+            dc:source       "not published right now";
+            dc:title        "SpeeTriC";
+            dc:description  """Clustering is a method to detect dense points. It
+                             has many fields of use in many different contexts. There are
+                             a lot of Algorithms to perform this task. In this paper we will
+                             introduce a new algorithm called SpeeTriC (Speedy Triangulation
+                             Clustering). We will show that this algorithm is able to perform
+                             great results and is extremely fast. Another great advantage
+                             is the ability to perform clustering on higher dimensions then
+                             2. It does not need any prior knowledge of the data but
+                             has optional parameters if needed. We will show advantages
+                             and disadvantages against other algorithms based on delauny-
+                             triangulation.""".
+            #dc:author      :person

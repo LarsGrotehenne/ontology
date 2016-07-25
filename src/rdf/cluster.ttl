@@ -28,15 +28,15 @@
 
 :Density-based      a           :category;
                     dc:title    "Density-based".
-:Delaunay-based     a           :category;
-                    dc:title    "Delaunay-based".
+:Delauney-based     a           :category;
+                    dc:title    "Delauney-based".
 :Centroid-based     a           :category;
                     dc:title    "Centroid-based".
 :Connectivity-based a           :category;
                     dc:title    "Connectivity-based".
-:Hierachical        a           :category;
+:Hierarchical       a          :category;
                     a           :Connectivity-based; # synonym to connectivity...
-                    dc:title    "Hierachical".
+                    dc:title    "Hierarchical".
 :Distribution-based a           :category;
                     dc:title    "Distribution-based".
 :Subspace-based     a           :category;

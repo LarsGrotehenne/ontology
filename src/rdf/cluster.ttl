@@ -11,20 +11,29 @@
 :described_in       a   rdf:predicate.
 :also_called        a   rdf:predicate.
 :refines            a   rdf:predicate.
-:take_parameter     a   rdf:predicate.
-:handle_noise       a   rdf:predicate.
-:multi_dim          a   rdf:predicate. # more than 2
-:speed              a   rdf:predicate.
+:take_parameter     a   rdf:predicate;
+                    a   :algo-property.
+:handle_noise       a   rdf:predicate;
+                    a   :algo-property.
+:multi_dim          a   rdf:predicate; # more than 2
+                    a   :algo-property.
+:speed              a   rdf:predicate;
+                    a   :algo-property.
 :has_category       a   rdf:predicate.
-:can_diff_dense     a   rdf:predicate.
+:can_diff_dense     a   rdf:predicate;
+                    a   :algo-property.
 #:can_diff_intra_dense...
-:can_encircled      a   rdf:predicate.
-:can_not_convex     a   rdf:predicate.
-:can_bridged        a   rdf:predicate.
+:can_encircled      a   rdf:predicate;
+                    a   :algo-property.
+:can_not_convex     a   rdf:predicate;
+                    a   :algo-property.
+:can_bridged        a   rdf:predicate;
+                    a   :algo-property.
 
 :Algorithm a rdfs:Class.
 
 :category           a   rdfs:Class.
+:algo-property      a   rdfs:Class.
 
 :Density-based      a           :category;
                     dc:title    "Density-based".

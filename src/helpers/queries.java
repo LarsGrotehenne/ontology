@@ -34,4 +34,17 @@ public class queries {
 
         queries.createQuery(queryString, model);
     }
+
+    public static void getAllCategories(Model model) {
+        String queryString =
+                "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
+                        "PREFIX : <http://cluster.info#>" +
+                        "SELECT ?category " +
+                        "WHERE {" +
+                        "      ?a a :category." +
+                        "?a dc:title ?category. " +
+                        "      }";
+
+        queries.createQuery(queryString, model);
+    }
 }

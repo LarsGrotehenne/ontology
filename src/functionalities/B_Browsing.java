@@ -45,16 +45,7 @@ public class B_Browsing extends FunctionObject {
     private String getCategory() {
         String category = null;
 
-        String queryString =
-                "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
-                        "PREFIX : <http://cluster.info#>" +
-                        "SELECT ?category " +
-                        "WHERE {" +
-                        "      ?a a :category." +
-                        "?a dc:title ?category. " +
-                        "      }";
-
-        queries.createQuery(queryString, model);
+        queries.getAllCategories(model);
 
         System.out.println("Select one of these Categories!");
         category = console.readLine();

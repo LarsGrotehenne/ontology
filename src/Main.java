@@ -27,6 +27,7 @@ public class Main extends rdfReader {
 
             add(new WriteModel(model));
             add(new AllAlgorithms(model));
+            add(new AllCategories(model));
             add(new A_Scenario(model));
             add(new B_Browsing(model));
             add(new C_Eigenschaften(model));

@@ -75,21 +75,4 @@ public class Main extends rdfReader {
         System.out.println(" ");
     }
 
-    /**
-     * old way to creating models without rdf-Files
-     */
-    /*public static void createModel() {
-        System.out.println("Hello World!");
-
-        Model m = ModelFactory.createDefaultModel();
-
-        String NS = "http://example.com/test/";
-
-        Resource r = m.createResource (NS + "r");
-        Property p = m.createProperty (NS + "p");
-
-        r.addProperty (p, "hello world", XSDDatatype.XSDstring);
-
-        m.write (System.out, "Turtle");
-    }*/
 }

@@ -23,7 +23,7 @@ public class AllCategories extends FunctionObject {
 
     @Override
     public String getDescription() {
-        return "Gibt alle Kategorien zurück.";
+        return "Gibt alle Kategorien zurueck.";
     }
 
     @Override

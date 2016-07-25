@@ -72,6 +72,6 @@ public class D_Literatur extends FunctionObject {
 
     @Override
     public String getDescription() {
-        return "Ausgabe der Literatur zu einem oder mehreren Clustering-Algorithmen";
+        return "Ausgabe der Literatur zu einem oder mehreren Clustering-Algorithmen.";
     }
 }

@@ -62,7 +62,7 @@ public class Main extends rdfReader {
         System.out.println("Folgende Funktionen koennen durch die Eingabe des entsprechenden Namens erreicht werden:");
         for( FunctionObject k: functionalities )
         {
-            System.out.println(k.getIdentifier() + ":   " + k.getDescription());
+            System.out.format("%-20s%-5s%n", k.getIdentifier(), k.getDescription());
         }
         System.out.println(" ");
     }

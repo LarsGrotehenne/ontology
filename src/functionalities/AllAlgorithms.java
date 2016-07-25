@@ -23,7 +23,7 @@ public class AllAlgorithms extends FunctionObject {
 
     @Override
     public String getDescription() {
-        return "Gibt alle Algorithmen zurück.";
+        return "Gibt alle Algorithmen zurueck.";
     }
 
     @Override

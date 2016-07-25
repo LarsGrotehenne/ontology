@@ -27,6 +27,6 @@ public class C_Eigenschaften extends FunctionObject {
 
     @Override
     public String getDescription() {
-        return "Ausgabe der Eigenschaften zu einem Clustering-Algorithmus";
+        return "Ausgabe von Clustering-Algorithmen zu bestimmten Eigenschaften.";
     }
 }

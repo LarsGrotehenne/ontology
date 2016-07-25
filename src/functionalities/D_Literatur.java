@@ -1,6 +1,7 @@
 package functionalities;
 
 import helpers.console;
+import helpers.queries;
 import org.apache.jena.rdf.model.Model;
 
 /**
@@ -40,7 +41,7 @@ public class D_Literatur extends FunctionObject {
                         "?paper dc:title ?papername." +
                      "}";
 
-        console.createQuery(queryString, model);
+        queries.createQuery(queryString, model);
 
         /**
          * TODO: Meldung falls kein Paper vorhanden ist
@@ -52,16 +53,7 @@ public class D_Literatur extends FunctionObject {
     private String[] getAlgorithms() {
         String algorithms[] = null;
 
-        String queryString =
-                "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
-                "PREFIX : <http://cluster.info#>" +
-                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-                        "SELECT ?algoname " +
-                        "WHERE {" +
-                        "?algo rdfs:label ?algoname." +
-                        "}";
-
-        console.createQuery(queryString, model);
+        queries.getAllAlgorithms(model);
 
         System.out.println("Select Algorithms, seperated with comma and no space!");
         algorithms = console.readLine().split(",");

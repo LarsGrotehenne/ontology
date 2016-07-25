@@ -2,6 +2,7 @@ package functionalities;
 
 
 import helpers.console;
+import helpers.queries;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
 
@@ -34,7 +35,7 @@ public class B_Browsing extends FunctionObject {
                         "?algo rdfs:label ?algoname." +
                         "}";
 
-        console.createQuery(queryString, model);
+        queries.createQuery(queryString, model);
 
         /**
          * TODO: Meldung fals kein Algorithmus zur genannten Kategorie vorhanden ist!
@@ -53,7 +54,7 @@ public class B_Browsing extends FunctionObject {
                         "?a dc:title ?category. " +
                         "      }";
 
-        console.createQuery(queryString, model);
+        queries.createQuery(queryString, model);
 
         System.out.println("Select one of these Categories!");
         category = console.readLine();

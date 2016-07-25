@@ -204,7 +204,6 @@
                         "distance";
         :handle_noise   false;
         :multi_dim      true;
-        :take_parameter "None";
         :can_encircled   true;
         :can_not_convex true;
         :can_diff_dense true;

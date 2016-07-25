@@ -8,14 +8,19 @@
 # project references as well as turtle templates. If in doubt, have a look at
 # https://github.com/AKSW/Xturtle/wiki/Usage
 
-:described_in   a   rdf:predicate.
-:also_called    a   rdf:predicate.
-:refines        a   rdf:predicate.
-:take_parameter a   rdf:predicate.
-:handle_noise   a   rdf:predicate.
-:multi_dim      a   rdf:predicate. # more than 2
-:speed          a   rdf:predicate.
-:has_category   a   rdf:predicate.
+:described_in       a   rdf:predicate.
+:also_called        a   rdf:predicate.
+:refines            a   rdf:predicate.
+:take_parameter     a   rdf:predicate.
+:handle_noise       a   rdf:predicate.
+:multi_dim          a   rdf:predicate. # more than 2
+:speed              a   rdf:predicate.
+:has_category       a   rdf:predicate.
+:can_diff_dense     a   rdf:predicate.
+#:can_diff_intra_dense...
+:can_inner_cluster  a   rdf:predicate.
+:can_not_convex     a   rdf:predicate.
+:can_bridges        a   rdf:predicate.
 
 :Algorithm a rdfs:Class.
 
@@ -39,9 +44,13 @@
 
 :alg1   :described_in   :paper1;
         rdfs:label      "DBScan";
+        :take_parameter "neighborhood size";
         :handle_noise   true;
         :speed          "normal";
         :has_category   :Density-based;
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
         a               :Algorithm.
 
 :alg2   :described_in   :paper2;
@@ -51,36 +60,57 @@
         :multi_dim      true;
         :speed          "very fast";
         :has_category   :Density-based;
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
+        :can_bridges    false;
         a               :Algorithm.
 
 :alg3   :described_in   :paper3,
                         :paper4;
         rdfs:label      "Meanshift";
+        :take_parameter "bandwidth";
         :speed          "fast";
         :multi_dim      true;
         :has_category   :Density-based;
+        :can_inner_cluster  false;
+        :can_diff_dense true;
+        :can_not_convex false;
+        :can_bridges    false;
         a               :Algorithm.
 
 :alg4   :described_in   :paper5;
         rdfs:label      "Single-Linkage";
         :speed          "slow";
         :has_category   :Hierarchical;
+        :can_bridges     false;
+        :can_diff_dense  true;
         a               :Algorithm.
 
 :alg5   :described_in   :paper6;
         rdfs:label      "K-Means";
+        :take_parameter "Number of clusters";
         :has_category   :Centroid-based;
+        :can_inner_cluster  false;
+        :can_diff_dense false;
+        :can_not_convex false;
+        :can_bridges    false;
         a               :Algorithm.
 
 :alg6   :described_in   :paper7;
         rdfs:label      "EM";
         :also_called    "Expectation-Maximization";
         :has_category   :Distribution-based;
+        :can_inner_cluster  false;
+        :can_diff_dense true;
+        :can_not_convex true;
+        :can_bridges    false;
         a               :Algorithm.
 
 :alg7   :described_in   :paper8;
         rdfs:label      "CLIQUE";
-        :multi_dim       true;
+        :multi_dim      true;
+        :can_diff_dense true;
         :has_category   :Subspace-based;
         a               :Algorithm.
 
@@ -88,13 +118,22 @@
         rdfs:label      "AMOEBA";
         :speed          "slow";
         :has_category   :Delauney-based;
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
+        :handle_noise   true;
+        :can_bridges    true;
         a               :Algorithm.
 
 :alg9   :described_in   :paper10;
         rdfs:label      "AUTOCLUST";
         :refines        :alg8;
         :take_parameter "None";
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
         :handle_noise   true;
+        :can_bridges    true;
         :speed          "very slow";
         :has_category   :Delauney-based;
         a               :Algorithm.
@@ -102,7 +141,11 @@
 :alg10  :described_in   :paper11;
         rdfs:label      "ASCDT";
         :refines        :alg8;
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
         :handle_noise   true;
+        :can_bridges    true;
         :has_category   :Delauney-based;
         a               :Algorithm.
 
@@ -110,7 +153,11 @@
         rdfs:label      "TRICLUST";
         :refines        :alg8;
         :speed          "slow";
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
         :handle_noise   true;
+        :can_bridges    true;
         :has_category   :Delauney-based;
         a               :Algorithm.
 
@@ -121,18 +168,34 @@
         :multi_dim      true;
         :speed          "very fast";
         :has_category   :Delauney-based;
+        :can_diff_dense true;
+        :can_inner_cluster  true;
+        :can_not_convex true;
         a               :Algorithm.
 
 :alg13  :described_in   :paper14,
                         :paper15;
         rdfs:label      "AffinityPropagation";
+        :take_parameter "damping",
+                        "sample preference";
         :speed          "fast";
+        :handle_noise   false;
+        :can_inner_cluster  false;
+        :can_diff_dense false;
+        :can_not_convex true;
         a               :Algorithm.
 
 :alg14  :described:in   :paper16;
         rdfs:label      "Agglomerative";
+        :take_parameter "number of clusters",
+                        "linkage type",
+                        "distance";
+        :handle_noise   false;
         :multi_dim      true;
-        :take_parameter  "None";
+        :take_parameter "None";
+        :can_inner_cluster  true;
+        :can_not_convex true;
+        :can_diff_dense true;
         a               :Algorithm.
 
 :paper1     a               :Paper;

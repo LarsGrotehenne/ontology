@@ -35,6 +35,10 @@ public class B_Browsing extends FunctionObject {
                         "}";
 
         console.createQuery(queryString, model);
+
+        /**
+         * TODO: Meldung fals kein Algorithmus zur genannten Kategorie vorhanden ist!
+         */
     }
 
     private String getCategory() {

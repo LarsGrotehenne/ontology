@@ -38,7 +38,7 @@ public class B_Browsing extends FunctionObject {
         queries.createQuery(queryString, model);
 
         /**
-         * TODO: Meldung fals kein Algorithmus zur genannten Kategorie vorhanden ist!
+         * TODO: Meldung falls kein Algorithmus zur genannten Kategorie vorhanden ist!
          */
     }
 

@@ -23,11 +23,11 @@ public class AllCategories extends FunctionObject {
 
     @Override
     public String getDescription() {
-        return "Gibt alle Algorithmen zurück.";
+        return "Gibt alle Kategorien zurück.";
     }
 
     @Override
     public String getIdentifier() {
-        return "algorithms";
+        return "categories";
     }
 }

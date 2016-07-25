@@ -24,12 +24,13 @@ public class Main extends rdfReader {
      */
     public static ArrayList<FunctionObject> functionalities = new ArrayList<FunctionObject>() {
         {
+
+            add(new WriteModel(model));
+            add(new GetAllAlgorithms(model));
             add(new A_Scenario(model));
             add(new B_Browsing(model));
             add(new C_Eigenschaften(model));
             add(new D_Literatur(model));
-            add(new WriteModel(model));
-            add(new TestScenario(model));
         }
     };
 
@@ -70,7 +71,6 @@ public class Main extends rdfReader {
      */
     private static void endOfOutput() {
         System.out.println("---------------------------------------------");
-        System.out.println(" ");
         System.out.println(" ");
     }
 

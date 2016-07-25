@@ -15,6 +15,7 @@
 :handle_noise   a   rdf:predicate.
 :multi_dim      a   rdf:predicate. # more than 2
 :speed          a   rdf:predicate.
+:has_category   a   rdf:predicate.
 
 :Algorithm a rdfs:Class.
 
@@ -33,8 +34,8 @@
         rdfs:label      "DBScan";
         :handle_noise   true;
         :speed          "normal";
-        a               :Density-based,
-                        :Algorithm.
+        :has_category   :Density-based;
+        a               :Algorithm.
 
 :alg2   :described_in   :paper2;
         rdfs:label      "BlackHole";
@@ -42,45 +43,45 @@
         :handle_noise   false;
         :multi_dim      true;
         :speed          "very fast";
-        a               :Density-based,
-                        :Algorithm.
+        :has_category   :Density-based;
+        a               :Algorithm.
 
 :alg3   :described_in   :paper3,
                         :paper4;
         rdfs:label      "Meanshift";
         :speed          "fast";
         :multi_dim      true;
-        a               :Density-based,
-                        :Algorithm.
+        :has_category   :Density-based;
+        a               :Algorithm.
 
 :alg4   :described_in   :paper5;
         rdfs:label      "Single-Linkage";
         :speed          "slow";
-        a               :Hierarchical,
-                        :Algorithm.
+        :has_category   :Hierarchical;
+        a               :Algorithm.
 
 :alg5   :described_in   :paper6;
         rdfs:label      "K-Means";
-        a               :Centroid-based,
-                        :Algorithm.
+        :has_category   :Centroid-based;
+        a               :Algorithm.
 
 :alg6   :described_in   :paper7;
         rdfs:label      "EM";
         :also_called    "Expectation-Maximization";
-        a               :Distribution-based,
-                        :Algorithm.
+        :has_category   :Distribution-based;
+        a               :Algorithm.
 
 :alg7   :described_in   :paper8;
         rdfs:label      "CLIQUE";
         :multi_dim       true;
-        a               :Subspace-based,
-                        :Algorithm.
+        :has_category   :Subspace-based;
+        a               :Algorithm.
 
 :alg8   :described_in   :paper9;
         rdfs:label      "AMOEBA";
         :speed          "slow";
-        a               :Delauney-based,
-                        :Algorithm.
+        :has_category   :Delauney-based;
+        a               :Algorithm.
 
 :alg9   :described_in   :paper10;
         rdfs:label      "AUTOCLUST";
@@ -88,23 +89,23 @@
         :take_parameter "None";
         :handle_noise   true;
         :speed          "very slow";
-        a               :Delauney-based,
-                        :Algorithm.
+        :has_category   :Delauney-based;
+        a               :Algorithm.
 
 :alg10  :described_in   :paper11;
         rdfs:label      "ASCDT";
         :refines        :alg8;
         :handle_noise   true;
-        a               :Delauney-based,
-                        :Algorithm.
+        :has_category   :Delauney-based;
+        a               :Algorithm.
 
 :alg11  :described_in   :paper12;
         rdfs:label      "TRICLUST";
         :refines        :alg8;
         :speed          "slow";
         :handle_noise   true;
-        a               :Delauney-based,
-                        :Algorithm.
+        :has_category   :Delauney-based;
+        a               :Algorithm.
 
 :alg12  :described_in   :paper13;
         rdfs:label      "SpeeTriC";
@@ -112,8 +113,8 @@
         :handle_noise   false;
         :multi_dim      true;
         :speed          "very fast";
-        a               :Delauney-based,
-                        :Algorithm.
+        :has_category   :Delauney-based;
+        a               :Algorithm.
 
 :alg13  :described_in   :paper14,
                         :paper15;

@@ -1,0 +1,79 @@
+A) Beschreibung von Clustereigenschaften und Ausgabe passender CL-Algos
+
+SELECT ?algoname
+WHERE {
+      ?algo   :can_circular   ?circular.
+      FILTER(?circular = circular value)
+      ?algo   :can_encircled   ?encircled.
+      FILTER(?encircled = encircled value)
+      ?algo   :can_bridged   ?bridged.
+      FILTER(?bridged = bridged value)
+      ?algo   rdfs:label   ?algoname.
+}
+ 
+
+
+
+B) Finden von CL-Algos nach einer bestimmten Kategorie
+
+SELECT ?categoryname ?algoname
+WHERE {
+      ?algo   :has_category   ?category.
+      ?category   dc:title   ?categoryname.
+      FILTER(?categoryname = "categoryname")
+      ?algo   rdfs:label   ?algoname.
+}
+
+
+
+
+C) Finden von CL-Algos anhand von mehreren Eigenschaften
+
+SELECT ?algoname
+WHERE {
+      ?algo   :take_parameter   ?param.
+      FILTER(?param = "parameter value")
+      ?algo   :handle_noise   ?noise.
+      FILTER(?noise = noise value)
+      ?algo   :multi_dim   ?dim.
+      FILTER(?dim = dim value)
+      ?algo   :speed   ?speed.
+      FILTER(?speed = "speed value")
+      ?algo   rdfs:label   ?algoname.
+ }
+
+
+
+
+D1) Finden von Literatur zu einem einzigen CL-Algo
+
+SELECT ?papername ?algoname
+WHERE {
+      ?algo    rdfs:label    ?algoname.
+      FILTER(?algoname = "algoname")
+      ?algo   :described_in   ?paper.
+      ?paper   dc:title   ?papername.
+}
+
+
+
+
+D2) Finden von Literatur zu mehreren CL-Algos
+
+SELECT ?papername1 ?algoname1 ?papername2 ?algoname2 ?papernameN ?algonameN
+WHERE {
+      ?algo1    rdfs:label    ?algoname1.
+      FILTER(?algoname1 = "algoname1")
+      ?algo1   :described_in   ?paper1.
+      ?paper1   dc:title   ?papername1.
+
+      ?algo2    rdfs:label    ?algoname2.
+      FILTER(?algoname2 = "algoname2")
+      ?algo2   :described_in   ?paper2.
+      ?paper2   dc:title   ?papername2.
+
+      ?algoN    rdfs:label    ?algonameN.
+      FILTER(?algonameN = "algonameN")
+      ?algoN   :described_in   ?paperN.
+      ?paperN   dc:title   ?papernameN.
+}

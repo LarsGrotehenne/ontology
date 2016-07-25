@@ -1,5 +1,8 @@
 package helpers;
 
+import org.apache.jena.query.*;
+import org.apache.jena.rdf.model.Model;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -19,6 +22,21 @@ public class console {
             System.out.println("Error! Exception: "+e);
         }
         return s;
+    }
+
+    public static void createQuery(String queryString, Model model) {
+
+        Query query = QueryFactory.create(queryString);
+
+        // Execute the query and obtain results
+        QueryExecution qe = QueryExecutionFactory.create(query, model);
+        ResultSet results = qe.execSelect();
+
+        // Output query results
+        ResultSetFormatter.out(System.out, results, query);
+
+        // Important – free up resources used running the query
+        qe.close();
     }
 
     public static String getCorrectOutputFormat() {

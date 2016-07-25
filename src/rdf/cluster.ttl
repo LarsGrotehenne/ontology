@@ -24,19 +24,22 @@
 
 :Algorithm a rdfs:Class.
 
-:Density-based      a           rdfs:Class;
+:category           a   rdfs:Class.
+
+:Density-based      a           :category;
                     dc:title    "Density-based".
-:Delaunay-based     a           :Density-based;
+:Delaunay-based     a           :category;
                     dc:title    "Delaunay-based".
-:Centroid-based     a       rdfs:Class;
+:Centroid-based     a           :category;
                     dc:title    "Centroid-based".
-:Connectivity-based a       rdfs:Class;
+:Connectivity-based a           :category;
                     dc:title    "Connectivity-based".
-:Hierachical        a       :Connectivity-based; # synonym to connectivity...
+:Hierachical        a           :category;
+                    a           :Connectivity-based; # synonym to connectivity...
                     dc:title    "Hierachical".
-:Distribution-based a       rdfs:Class;
+:Distribution-based a           :category;
                     dc:title    "Distribution-based".
-:Subspace-based     a       rdfs:Class;
+:Subspace-based     a           :category;
                     dc:title    "Subspace-based".
 
 :Paper a rdfs:Class.

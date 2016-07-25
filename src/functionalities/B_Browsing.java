@@ -22,8 +22,19 @@ public class B_Browsing extends FunctionObject {
     public void start() {
         String category = getCategory();
 
+        String queryString =
+                "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
+                "PREFIX : <http://cluster.info#>" +
+                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+                "SELECT ?algoname " +
+                        "WHERE {" +
+                        "?algo :has_category ?category." +
+                        "?category dc:title ?categoryname." +
+                        "FILTER(?categoryname = '"+category+"')." +
+                        "?algo rdfs:label ?algoname." +
+                        "}";
 
-        System.out.println("Zurzeit keine Functionalitaeten.");
+        console.createQuery(queryString, model);
     }
 
     private String getCategory() {

@@ -10,8 +10,8 @@
 
 #classes
 :Algorithm          a   rdfs:Class.
-:category           a   rdfs:Class.
-:algo-property      a   rdfs:Class.
+:Category           a   rdfs:Class.
+:Algo-property      a   rdfs:Class.
 :Paper              a   rdfs:Class.
 
 #predicates
@@ -22,44 +22,44 @@
 
 #properties and values
 :take_parameter     a           rdf:predicate,
-                                :algo-property;
+                                :Algo-property;
                     dc:title    "take_parameter";
                     :has_values ( :neighborhood_size :bandwidth :num_clusters :damping :sample_preference :linkage_type :distance ).
 
 :can_cluster        a           rdf:predicate,
-                                :algo-property;
+                                :Algo-property;
                     dc:title    "can_cluster";
                     :has_values ( :encircled :not_convex :diff_dense :bridget ).
 
 :handle_noise       a           rdf:predicate,
-                                :algo-property;
+                                :Algo-property;
                     dc:title    "handle_noise".
 
 :multi_dim          a           rdf:predicate, # more than 2
-                                :algo-property;
+                                :Algo-property;
                     dc:title    "multi_dim".
 
 :speed              a           rdf:predicate,
-                                :algo-property;
+                                :Algo-property;
                     dc:title    "speed";
                     :has_values ( :very_fast :fast :normal :slow :very_slow ).
 
 
 #categories
-:Density-based      a           :category;
+:Density-based      a           :Category;
                     dc:title    "Density-based".
-:Delauney-based     a           :category;
+:Delauney-based     a           :Category;
                     dc:title    "Delauney-based".
-:Centroid-based     a           :category;
+:Centroid-based     a           :Category;
                     dc:title    "Centroid-based".
-:Connectivity-based a           :category;
+:Connectivity-based a           :Category;
                     dc:title    "Connectivity-based".
-:Hierarchical       a          :category;
+:Hierarchical       a		:Category;
                     a           :Connectivity-based; # synonym to connectivity...
                     dc:title    "Hierarchical".
-:Distribution-based a           :category;
+:Distribution-based a           :Category;
                     dc:title    "Distribution-based".
-:Subspace-based     a           :category;
+:Subspace-based     a           :Category;
                     dc:title    "Subspace-based".
 
 
@@ -432,11 +432,11 @@
 
 #could be deleted?
 :can_diff_dense     a   rdf:predicate;
-                    a   :algo-property.
+                    a   :Algo-property.
 #:can_diff_intra_dense...
 :can_encircled      a   rdf:predicate;
-                    a   :algo-property.
+                    a   :Algo-property.
 :can_not_convex     a   rdf:predicate;
-                    a   :algo-property.
+                    a   :Algo-property.
 :can_bridged        a   rdf:predicate;
-                    a   :algo-property.
+                    a   :Algo-property.

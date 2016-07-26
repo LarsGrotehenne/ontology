@@ -27,9 +27,9 @@ public class queries {
                 "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
                         "PREFIX : <http://cluster.info#>" +
                         "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-                        "SELECT ?algoname " +
+                        "SELECT ?Algorithmus " +
                         "WHERE {" +
-                        "?algo rdfs:label ?algoname." +
+                        "?algo rdfs:label ?Algorithmus." +
                         "}";
 
         queries.createQuery(queryString, model);
@@ -39,11 +39,27 @@ public class queries {
         String queryString =
                 "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
                         "PREFIX : <http://cluster.info#>" +
-                        "SELECT ?category " +
+                        "SELECT ?Kategorie " +
                         "WHERE {" +
                         "      ?a a :category." +
-                        "?a dc:title ?category. " +
+                        "?a dc:title ?Kategorie. " +
                         "      }";
+
+        queries.createQuery(queryString, model);
+    }
+
+    public static void getAllProperties(Model model) {
+        String queryString =
+                "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
+                "PREFIX : <http://cluster.info#>" +
+                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+                     "SELECT ?Eigenschaft ?Wert " +
+                     "WHERE {" +
+                        "?property a :algo-property." +
+                        "?property dc:title ?Eigenschaft." +
+                        "OPTIONAL { ?property :has_values/rdf:rest*/rdf:first ?Wert.}" +
+                     "}";
 
         queries.createQuery(queryString, model);
     }

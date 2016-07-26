@@ -6,28 +6,28 @@ import org.apache.jena.rdf.model.Model;
 /**
  * Created by Lars on 25.07.2016.
  */
-public class AllAlgorithms extends FunctionObject {
+public class AllProperties extends FunctionObject {
     /**
      * constructor
      *
      * @param _model current model
      */
-    public AllAlgorithms(Model _model) {
+    public AllProperties(Model _model) {
         super(_model);
     }
 
     @Override
     public void start() {
-        queries.getAllAlgorithms(model);
+        queries.getAllProperties(model);
     }
 
     @Override
     public String getDescription() {
-        return "Gibt alle Algorithmen zurueck.";
+        return "Gibt alle Eigenschaften zurueck.";
     }
 
     @Override
     public String getIdentifier() {
-        return "allAlgorithms";
+        return "allProperties";
     }
 }

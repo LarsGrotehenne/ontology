@@ -54,11 +54,11 @@ public class queries {
                 "PREFIX : <http://cluster.info#>" +
                 "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
                 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
-                     "SELECT ?propertyname ?values " +
+                     "SELECT ?Eigenschaft ?Wert " +
                      "WHERE {" +
                         "?property a :algo-property." +
-                        "?property dc:title ?propertyname." +
-                        "OPTIONAL { ?property :has_values/rdf:rest*/rdf:first ?values.}" +
+                        "?property dc:title ?Eigenschaft." +
+                        "OPTIONAL { ?property :has_values/rdf:rest*/rdf:first ?Wert.}" +
                      "}";
 
         queries.createQuery(queryString, model);

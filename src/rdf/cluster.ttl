@@ -8,21 +8,28 @@
 # project references as well as turtle templates. If in doubt, have a look at
 # https://github.com/AKSW/Xturtle/wiki/Usage
 
+#classes
+:Algorithm          a   rdfs:Class.
+:category           a   rdfs:Class.
+:algo-property      a   rdfs:Class.
+:Paper              a   rdfs:Class.
+
+#predicates
+:has_category       a   rdf:predicate.
 :described_in       a   rdf:predicate.
 :also_called        a   rdf:predicate.
 :refines            a   rdf:predicate.
 
+#properties and values
 :take_parameter     a           rdf:predicate,
                                 :algo-property;
                     dc:title    "take_parameter";
-                    :has_values :neighborhood_size.
+                    :has_values ( :neighborhood_size ).
 
 :can_cluster        a           rdf:predicate,
                                 :algo-property;
                     dc:title    "can_cluster";
-                    :has_values :encircled,
-                                :not_convex,
-                                :diff_dense.
+                    :has_values ( :encircled :not_convex :diff_dense :bridget ).
 
 :handle_noise       a           rdf:predicate,
                                 :algo-property;
@@ -35,26 +42,10 @@
 :speed              a           rdf:predicate,
                                 :algo-property;
                     dc:title    "speed";
-                    :has_values :normal.
+                    :has_values ( :normal ).
 
 
-:has_category       a   rdf:predicate.
-
-:can_diff_dense     a   rdf:predicate;
-                    a   :algo-property.
-#:can_diff_intra_dense...
-:can_encircled      a   rdf:predicate;
-                    a   :algo-property.
-:can_not_convex     a   rdf:predicate;
-                    a   :algo-property.
-:can_bridged        a   rdf:predicate;
-                    a   :algo-property.
-
-:Algorithm a rdfs:Class.
-
-:category           a   rdfs:Class.
-:algo-property      a   rdfs:Class.
-
+#categories
 :Density-based      a           :category;
                     dc:title    "Density-based".
 :Delauney-based     a           :category;
@@ -71,20 +62,20 @@
 :Subspace-based     a           :category;
                     dc:title    "Subspace-based".
 
-:Paper a rdfs:Class.
 
 
+#algorithms
 :alg1   :described_in   :paper1;
         rdfs:label      "DBScan";
         :properties     (
                         :handle_noise
                         :take_parameter :neighborhood_size
                         :speed          :normal
-                        :can_cluster     (
-                                         :encircled
-                                         :not_convex
-                                         :diff_dense
-                                         )
+                        :can_cluster    :has_values (
+                                                     :encircled
+                                                     :not_convex
+                                                     :diff_dense
+                                                     )
                         );
         :has_category   :Density-based;
         a               :Algorithm.
@@ -233,6 +224,7 @@
         :can_diff_dense true;
         a               :Algorithm.
 
+#paper
 :paper1     a               :Paper;
             dc:source       "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf";
             dc:title        "A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise".
@@ -396,3 +388,14 @@
                             applicable to a wide class of data of arbitrary shape, large size and high
                             dimensionality. The algorithm can discern mutually homogenous clusters.
                             Strong or weak patterns can be discerned by properly choosing the neighbourhood width.""".
+
+#could be deleted?
+:can_diff_dense     a   rdf:predicate;
+                    a   :algo-property.
+#:can_diff_intra_dense...
+:can_encircled      a   rdf:predicate;
+                    a   :algo-property.
+:can_not_convex     a   rdf:predicate;
+                    a   :algo-property.
+:can_bridged        a   rdf:predicate;
+                    a   :algo-property.

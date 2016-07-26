@@ -41,7 +41,7 @@ public class queries {
                         "PREFIX : <http://cluster.info#>" +
                         "SELECT ?Kategorie " +
                         "WHERE {" +
-                        "      ?a a :category." +
+                        "      ?a a :Category." +
                         "?a dc:title ?Kategorie. " +
                         "      }";
 
@@ -56,7 +56,7 @@ public class queries {
                 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
                      "SELECT ?Eigenschaft ?Wert " +
                      "WHERE {" +
-                        "?property a :algo-property." +
+                        "?property a :Algo-property." +
                         "?property dc:title ?Eigenschaft." +
                         "OPTIONAL { ?property :has_values/rdf:rest*/rdf:first ?Wert.}" +
                      "}";

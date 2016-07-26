@@ -24,21 +24,21 @@ public class D_Literatur extends FunctionObject {
 
         String filterOptions = "";
         if(algorithms.length > 0) {
-            filterOptions = "?algoname = '"+algorithms[0]+"'";
+            filterOptions = "?Algorithmus = '"+algorithms[0]+"'";
             for(int i=1; i<algorithms.length; i++) {
-                filterOptions = filterOptions + " || ?algoname = '"+algorithms[i]+"'";
+                filterOptions = filterOptions + " || ?Algorithmus = '"+algorithms[i]+"'";
             }
         }
         String queryString =
                 "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
                 "PREFIX : <http://cluster.info#>" +
                 "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-                     "SELECT ?algoname ?papername " +
+                     "SELECT ?Algorithmus ?Paper " +
                      "WHERE {" +
-                        "?algo rdfs:label ?algoname." +
+                        "?algo rdfs:label ?Algorithmus." +
                         "FILTER("+filterOptions+")." +
                         "?algo :described_in ?paper." +
-                        "?paper dc:title ?papername." +
+                        "?paper dc:title ?Paper." +
                      "}";
 
         queries.createQuery(queryString, model);
@@ -55,7 +55,7 @@ public class D_Literatur extends FunctionObject {
 
         queries.getAllAlgorithms(model);
 
-        System.out.println("Select Algorithms, seperated with comma and no space!");
+        System.out.println("Algorithmen auswaehlen, getrennt mit einem Komma ohne Leerzeichen!");
         algorithms = console.readLine().split(",");
 
         /**

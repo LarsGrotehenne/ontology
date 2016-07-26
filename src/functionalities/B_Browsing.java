@@ -27,12 +27,12 @@ public class B_Browsing extends FunctionObject {
                 "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
                 "PREFIX : <http://cluster.info#>" +
                 "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-                "SELECT ?algoname " +
+                "SELECT ?Algorithmus " +
                         "WHERE {" +
                         "?algo :has_category ?category." +
                         "?category dc:title ?categoryname." +
                         "FILTER(?categoryname = '"+category+"')." +
-                        "?algo rdfs:label ?algoname." +
+                        "?algo rdfs:label ?Algorithmus." +
                         "}";
 
         queries.createQuery(queryString, model);
@@ -47,7 +47,7 @@ public class B_Browsing extends FunctionObject {
 
         queries.getAllCategories(model);
 
-        System.out.println("Select one of these Categories!");
+        System.out.println("Eine der Kategorien auswaehlen!");
         category = console.readLine();
 
         /**

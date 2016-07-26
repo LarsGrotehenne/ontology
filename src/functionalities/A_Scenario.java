@@ -20,7 +20,7 @@ public class A_Scenario extends FunctionObject {
     public String getDescription() {
         return "Selektion von einem oder mehreren " +
                 "Clusteringalgorithmen durch das Angeben " +
-                "unterschiedlicher Szenarien.";
+                "unterschiedlicher Eigenschaften der Daten.";
     }
 
     @Override

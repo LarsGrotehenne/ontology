@@ -11,15 +11,35 @@
 :described_in       a   rdf:predicate.
 :also_called        a   rdf:predicate.
 :refines            a   rdf:predicate.
-:take_parameter     a   rdf:predicate;
-                    a   :algo-property.
-:handle_noise       a   rdf:predicate;
-                    a   :algo-property.
-:multi_dim          a   rdf:predicate; # more than 2
-                    a   :algo-property.
-:speed              a   rdf:predicate;
-                    a   :algo-property.
+
+:take_parameter     a           rdf:predicate,
+                                :algo-property;
+                    dc:title    "take_parameter";
+                    :has_values :neighborhood_size.
+
+:can_cluster        a           rdf:predicate,
+                                :algo-property;
+                    dc:title    "can_cluster";
+                    :has_values :encircled,
+                                :not_convex,
+                                :diff_dense.
+
+:handle_noise       a           rdf:predicate,
+                                :algo-property;
+                    dc:title    "handle_noise".
+
+:multi_dim          a           rdf:predicate, # more than 2
+                                :algo-property;
+                    dc:title    "multi_dim".
+
+:speed              a           rdf:predicate,
+                                :algo-property;
+                    dc:title    "speed";
+                    :has_values :normal.
+
+
 :has_category       a   rdf:predicate.
+
 :can_diff_dense     a   rdf:predicate;
                     a   :algo-property.
 #:can_diff_intra_dense...
@@ -56,13 +76,17 @@
 
 :alg1   :described_in   :paper1;
         rdfs:label      "DBScan";
-        :take_parameter "neighborhood size";
-        :handle_noise   true;
-        :speed          "normal";
+        :properties     (
+                        :handle_noise
+                        :take_parameter :neighborhood_size
+                        :speed          :normal
+                        :can_cluster     (
+                                         :encircled
+                                         :not_convex
+                                         :diff_dense
+                                         )
+                        );
         :has_category   :Density-based;
-        :can_encircled   true;
-        :can_not_convex true;
-        :can_diff_dense true;
         a               :Algorithm.
 
 :alg2   :described_in   :paper2;
@@ -72,7 +96,7 @@
         :multi_dim      true;
         :speed          "very fast";
         :has_category   :Density-based;
-        :can_encircled   true;
+        :can_encircled  true;
         :can_not_convex true;
         :can_diff_dense true;
         :can_bridged    false;

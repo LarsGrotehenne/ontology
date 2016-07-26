@@ -28,6 +28,6 @@ public class AllAlgorithms extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return "algorithms";
+        return "allAlgorithms";
     }
 }

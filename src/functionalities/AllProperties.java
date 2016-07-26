@@ -28,6 +28,6 @@ public class AllProperties extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return "properties";
+        return "allProperties";
     }
 }

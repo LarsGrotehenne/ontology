@@ -28,6 +28,6 @@ public class AllCategories extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return "categories";
+        return "allCategories";
     }
 }

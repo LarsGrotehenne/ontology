@@ -81,7 +81,7 @@ public class C_Eigenschaften extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return "eigenschaften";
+        return "properties";
     }
 
     @Override

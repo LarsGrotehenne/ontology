@@ -67,7 +67,7 @@ public class D_Literatur extends FunctionObject {
 
     @Override
     public String getIdentifier() {
-        return "literatur";
+        return "literature";
     }
 
     @Override

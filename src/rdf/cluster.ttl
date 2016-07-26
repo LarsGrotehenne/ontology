@@ -447,14 +447,3 @@
                             applicable to a wide class of data of arbitrary shape, large size and high
                             dimensionality. The algorithm can discern mutually homogenous clusters.
                             Strong or weak patterns can be discerned by properly choosing the neighbourhood width.""".
-
-#could be deleted?
-:can_diff_dense     a   rdf:predicate;
-                    a   :Algo-property.
-#:can_diff_intra_dense...
-:can_encircled      a   rdf:predicate;
-                    a   :Algo-property.
-:can_not_convex     a   rdf:predicate;
-                    a   :Algo-property.
-:can_bridged        a   rdf:predicate;
-                    a   :Algo-property.

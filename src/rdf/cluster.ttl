@@ -54,7 +54,7 @@
                     dc:title    "Centroid-based".
 :Connectivity-based a           :Category;
                     dc:title    "Connectivity-based".
-:Hierarchical       a		:Category;
+:Hierarchical       a		    :Category;
                     a           :Connectivity-based; # synonym to connectivity...
                     dc:title    "Hierarchical".
 :Distribution-based a           :Category;

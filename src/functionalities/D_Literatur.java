@@ -20,7 +20,7 @@ public class D_Literatur extends FunctionObject {
     @Override
     public void start() {
 
-        String[] algorithms = getAlgorithms();
+        String[] algorithms = queries.getAlgorithms(model);
 
         String filterOptions = "";
         if(algorithms.length > 0) {
@@ -50,20 +50,7 @@ public class D_Literatur extends FunctionObject {
         
     }
 
-    private String[] getAlgorithms() {
-        String algorithms[] = null;
 
-        queries.getAllAlgorithms(model);
-
-        System.out.println("Algorithmen auswaehlen, getrennt mit einem Komma ohne Leerzeichen!");
-        algorithms = console.readLine().split(",");
-
-        /**
-         * TODO: Sicherstellen, dass der eingegebene Algorithmus überhaupt vorhanden ist!
-         */
-
-        return algorithms;
-    }
 
     @Override
     public String getIdentifier() {

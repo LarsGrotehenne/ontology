@@ -77,4 +77,19 @@ public class queries {
 
         queries.createQuery(queryString, model);
     }
+
+    public static String[] getAlgorithms(Model model) {
+        String algorithms[] = null;
+
+        queries.getAllAlgorithms(model);
+
+        System.out.println("Algorithmen auswaehlen, getrennt mit einem Komma ohne Leerzeichen!");
+        algorithms = console.readLine().split(",");
+
+        /**
+         * TODO: Sicherstellen, dass der eingegebene Algorithmus überhaupt vorhanden ist!
+         */
+
+        return algorithms;
+    }
 }

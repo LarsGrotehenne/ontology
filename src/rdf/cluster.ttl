@@ -78,17 +78,13 @@
         rdfs:label      "BlackHole";
         :has_category   :Density-based;
         :described_in   :paper2;
-        :properties     (
-                        :multi_dim
-                        :speed          :has_values (
-                                                    :very_fast
-                                                    )
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    )
-                        ).
+        :properties     [
+                        :has_property    (:multi_dim);
+                        :speed          (:very_fast);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense);
+                        ].
         
 :alg3   a               :Algorithm;
         rdfs:label      "Meanshift";

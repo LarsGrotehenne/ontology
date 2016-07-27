@@ -31,19 +31,15 @@
                     dc:title    "can_cluster";
                     :has_values ( :encircled :not_convex :diff_dense :bridget ).
 
-:handle_noise       a           rdf:predicate,
+:has_property       a           rdf:predicate,
                                 :Algo-property;
-                    dc:title    "handle_noise".
-
-:multi_dim          a           rdf:predicate, # more than 2
-                                :Algo-property;
-                    dc:title    "multi_dim".
+                    dc:title    "has_property";
+                    :has_values  ( :handle_noise :multi_dim ).
 
 :speed              a           rdf:predicate,
                                 :Algo-property;
                     dc:title    "speed";
                     :has_values ( :very_fast :fast :normal :slow :very_slow ).
-
 
 #categories
 :Density-based      a           :Category;
@@ -70,8 +66,8 @@
         :has_category   :Density-based;
         :described_in   :paper1;
         :properties     [
-                        :has_property   :handle_noise;
-                        :speed          :normal;
+                        :has_property   (:handle_noise);
+                        :speed          (:normal);
                         :take_parameter (:neighborhood_size);
                         :can_cluster    (:encircled
                                          :not_convex

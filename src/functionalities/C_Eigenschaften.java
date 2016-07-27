@@ -38,12 +38,10 @@ public class C_Eigenschaften extends FunctionObject {
                     "SELECT ?Algorithmus " +
                     "WHERE {" +
                         "?algo rdfs:label ?Algorithmus." +
-                        "?algo :properties ?proplist." +
-                        "?proplist list:member ?props." +
-                        "FILTER (?props = :"+propValue[0]+")." +
-                        "?props :has_values ?list." +
-                        "filter not exists {" +
-                            "values ?value { :"+propValue[1]+" }" +
+                        "?algo :properties ?props." +
+                        "?props :"+propValue[0]+" ?list." +
+                         "filter not exists {" +
+                            "values ?value { :"+propValue[1]+ " }" +
                             "filter not exists {" +
                                 "?list rdf:rest*/rdf:first ?value" +
                             "}" +

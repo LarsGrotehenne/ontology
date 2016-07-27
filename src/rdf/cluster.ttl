@@ -69,20 +69,14 @@
         rdfs:label      "DBScan";
         :has_category   :Density-based;
         :described_in   :paper1;
-        :properties     (
-                        :handle_noise
-                        :take_parameter :has_values (
-                                                    :neighborhood_size
-                                                    )
-                        :speed          :has_values (
-                                                    :normal
-                                                    )
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    )
-                        ).
+        :properties     [
+                        :has_property   :handle_noise;
+                        :speed          :normal;
+                        :take_parameter (:neighborhood_size);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense);
+                        ].
         
 :alg2   a               :Algorithm;
         rdfs:label      "BlackHole";

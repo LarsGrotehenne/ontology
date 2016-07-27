@@ -33,11 +33,9 @@ public class A_Scenario extends FunctionObject {
                     "SELECT ?Algorithmus " +
                     "WHERE {" +
                         "?algo rdfs:label ?Algorithmus." +
-                        "?algo :properties ?proplist." +
-                        "?proplist list:member ?props." +
-                        "FILTER (?props = :can_cluster)." +
-                        "?props :has_values ?list." +
-                        "filter not exists {" +
+                        "?algo :properties ?props." +
+                        "?props :can_cluster ?list." +
+                         "filter not exists {" +
                             "values ?value { "+filter+" }" +
                             "filter not exists {" +
                                 "?list rdf:rest*/rdf:first ?value" +

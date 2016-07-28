@@ -91,183 +91,139 @@
         :has_category   :Density-based;
         :described_in   :paper3,
                         :paper4;
-        :properties     (
-                        :take_parameter :has_values (
-                                                    :bandwidth
-                                                    )
-                        :multi_dim
-                        :speed          :has_values (
-                                                    :fast
-                                                    )
-                        :can_cluster    :has_values (
-                                                    :diff_dense
-                                                    )
-                        ).
+        :properties     [
+                        :take_parameter (:bandwidth);
+                        :has_property   (:multi_dim);
+                        :speed          (:fast);
+                        :can_cluster    (:diff_dense);
+                        ].
 
 :alg4   a               :Algorithm;
         rdfs:label      "Single-Linkage";
         :has_category   :Hierarchical;
         :described_in   :paper5;
-        :properties     (
-                        :speed          :has_values (
-                                                    :slow
-                                                    )
-                        :can_cluster    :has_values (
-                                                    :diff_dense
-                                                    )
-                        ).
+        :properties     [
+                        :speed          (:slow);
+                        :can_cluster    (:diff_dense);
+                        ].
 
 :alg5   a               :Algorithm;
         rdfs:label      "K-Means";
         :has_category   :Centroid-based;
         :described_in   :paper6;
-        :properties     (
-                        :take_parameter :has_values (
-                                                    :num_clusters
-                                                    )
-                        ).
+        :properties     [
+                        :take_parameter (:num_clusters);
+                        ].
 
 :alg6   a               :Algorithm;
         rdfs:label      "EM";
         :also_called    "Expectation-Maximization";
         :has_category   :Distribution-based;
         :described_in   :paper7;
-        :properties     (
-                        :can_cluster    :has_values (
-                                                    :diff_dense
-                                                    :not_convex
-                                                    )
-                        ).
+        :properties     [
+                        :can_cluster    (:diff_dense
+                                         :not_convex);
+                        ].
 
 :alg7   a               :Algorithm;
         rdfs:label      "CLIQUE";
         :has_category   :Subspace-based;
         :described_in   :paper8;
-        :properties     (
-                        :multi_dim
-                        :can_cluster    :has_values (
-                                                    :diff_dense
-                                                    )
-                        ).
+        :properties     [
+                        :has_property   (:multi_dim);
+                        :can_cluster    (:diff_dense);
+                        ].
 
 :alg8   a               :Algorithm;
         rdfs:label      "AMOEBA";
         :has_category   :Delauney-based;
         :described_in   :paper9;
-        :properties     (
-                        :speed          :has_values (
-                                                    :slow
-                                                    )
-                        :handle_noise
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    :bridged
-                                                    )
-                        ).
+        :properties     [
+                        :speed          (:slow);
+                        :has_property   (:handle_noise);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense
+                                         :bridged);
+                        ].
 
 :alg9   a               :Algorithm;
         rdfs:label      "AUTOCLUST";
         :has_category   :Delauney-based;
         :described_in   :paper10;
         :refines        :alg8;
-        :properties     (
-                        :speed          :has_values (
-                                                    :very_slow
-                                                    )
-                        :handle_noise
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    :bridged
-                                                    )
-                        ).
+        :properties     [
+                        :speed          (:very_slow);
+                        :has_property   (:handle_noise);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense
+                                         :bridged);
+                        ].
 
 :alg10  a               :Algorithm;
         rdfs:label      "ASCDT";
         :has_category   :Delauney-based;
         :described_in   :paper11;
         :refines        :alg8;
-        :properties     (
-                        :handle_noise
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    :bridged
-                                                    )
-                        ).
+        :properties     [
+                        :has_property   (:handle_noise);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense
+                                         :bridged);
+                        ].
         
 :alg11  a               :Algorithm;
         rdfs:label      "TRICLUST";
         :has_category   :Delauney-based;
         :described_in   :paper12;
         :refines        :alg8;
-        :properties     (
-                        :speed          :has_values (
-                                                    :slow
-                                                    )
-                        :handle_noise
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    :bridged
-                                                    )
-                        ).
+        :properties     [
+                        :speed          (:slow);
+                        :has_property   (:handle_noise);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense
+                                         :bridged);
+                        ].
 
 :alg12  a               :Algorithm;
         rdfs:label      "SpeeTriC";
         :has_category   :Delauney-based;
         :described_in   :paper13;
-        :properties     (
-                        :speed          :has_values (
-                                                    :very_fast
-                                                    )
-                        :multi_dim
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    )
-                        ).
+        :properties     [
+                        :speed          (:very_fast);
+                        :has_property   (:multi_dim);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense);
+                        ].
 
 :alg13  a               :Algorithm;
         rdfs:label      "AffinityPropagation";
         :described_in   :paper14,
                         :paper15;
-        :properties     (
-                        :speed          :has_values (
-                                                    :fast
-                                                    )
-                        :take_parameter :has_values (
-                                                    :damping
-                                                    :sample_preference
-                                                    )
-                        :can_cluster    :has_values (
-                                                    :not_convex
-                                                    )
-                        ).
+        :properties     [
+                        :speed          (:fast);
+                        :take_parameter (:damping
+                                         :sample_preference);
+                        :can_cluster    (:not_convex);
+                        ].
                         
 :alg14  a               :Algorithm;
         rdfs:label      "Agglomerative";
         :described:in   :paper16;
-        :properties     (
+        :properties     [
                         :multi_dim
-                        :take_parameter :has_values (
-                                                    :num_clusters
-                                                    :sample_preference
-                                                    :linkage_type
-                                                    :distance
-                                                    )
-                        :can_cluster    :has_values (
-                                                    :encircled
-                                                    :not_convex
-                                                    :diff_dense
-                                                    )
-                        ).
+                        :take_parameter (:num_clusters
+                                         :sample_preference
+                                         :linkage_type
+                                         :distance);
+                        :can_cluster    (:encircled
+                                         :not_convex
+                                         :diff_dense);
+                        ].
 
 #paper
 :paper1     a               :Paper;

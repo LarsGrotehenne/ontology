@@ -35,7 +35,7 @@
 :has_property       a           rdf:predicate,
                                 :Algo-property;
                     dc:title    "has_property";
-                    :has_values  ( :handle_noise :multi_dim ).
+                    :has_values  ( :handle_noise :multi_dim).
 
 :speed              a           rdf:predicate,
                                 :Algo-property;
@@ -225,6 +225,13 @@
                                          :not_convex
                                          :diff_dense);
                         ].
+
+#:alg15  a               :Algorithm;
+#        rdfs:label      "Birch";
+#        :properties     [
+#                        :has_property   (:multi_dim);
+#                        ].
+
 
 #paper
 :paper1     a               :Paper;

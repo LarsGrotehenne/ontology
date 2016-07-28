@@ -30,7 +30,7 @@ public class queries {
                         "SELECT ?Algorithmus " +
                         "WHERE {" +
                         "?algo rdfs:label ?Algorithmus." +
-                        "}";
+                        "} order by ?Algorithmus";
 
         queries.createQuery(queryString, model);
     }
@@ -43,7 +43,7 @@ public class queries {
                         "WHERE {" +
                         "      ?a a :Category." +
                         "?a dc:title ?Kategorie. " +
-                        "      }";
+                        "      }  order by ?Kategorie";
 
         queries.createQuery(queryString, model);
     }
@@ -59,7 +59,7 @@ public class queries {
                         "?property a :Algo-property." +
                         "?property dc:title ?Eigenschaft." +
                         "?property :has_values/rdf:rest*/rdf:first ?Wert." +
-                     "}";
+                     "}  order by ?Eigenschaft ?Wert";
 
         queries.createQuery(queryString, model);
     }
@@ -73,7 +73,7 @@ public class queries {
                         "SELECT ?Clustertyp " +
                         "WHERE {" +
                         ":can_cluster :has_values/rdf:rest*/rdf:first ?Clustertyp." +
-                        "}";
+                        "} order by ?Clustertyp";
 
         queries.createQuery(queryString, model);
     }

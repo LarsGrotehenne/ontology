@@ -51,7 +51,7 @@ public class C_Eigenschaften extends FunctionObject {
                     "}" +
                     "}}";
         }
-        queryString=queryString+"}";
+        queryString=queryString+"} order by ?Algorithmus";
         queries.createQuery(queryString, model);
     }
 

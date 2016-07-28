@@ -33,7 +33,7 @@ public class B_Browsing extends FunctionObject {
                         "?category dc:title ?categoryname." +
                         "FILTER(?categoryname = '"+category+"')." +
                         "?algo rdfs:label ?Algorithmus." +
-                        "}";
+                        "} order by ?Algorithmus";
 
         queries.createQuery(queryString, model);
 

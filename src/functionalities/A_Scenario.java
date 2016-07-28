@@ -42,7 +42,7 @@ public class A_Scenario extends FunctionObject {
                                 "?list rdf:rest*/rdf:first ?value" +
                             "}" +
                         "}" +
-                    "}";
+                    "} order by ?Algorithmus";
 
             queries.createQuery(queryString, model);
 

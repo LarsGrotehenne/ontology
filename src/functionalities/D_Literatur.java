@@ -39,7 +39,7 @@ public class D_Literatur extends FunctionObject {
                         "FILTER("+filterOptions+")." +
                         "?algo :described_in ?paper." +
                         "?paper dc:title ?Paper." +
-                     "}";
+                     "}  order by ?Algorithmus ?Paper";
 
         queries.createQuery(queryString, model);
 

@@ -58,7 +58,7 @@ public class queries {
                      "WHERE {" +
                         "?property a :Algo-property." +
                         "?property dc:title ?Eigenschaft." +
-                        "OPTIONAL { ?property :has_values/rdf:rest*/rdf:first ?Wert.}" +
+                        "?property :has_values/rdf:rest*/rdf:first ?Wert." +
                      "}";
 
         queries.createQuery(queryString, model);

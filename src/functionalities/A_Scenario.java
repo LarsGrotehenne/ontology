@@ -17,7 +17,8 @@ public class A_Scenario extends FunctionObject {
     public void start() {
 
         queries.getAllClustertypes(model);
-        System.out.println("Einen oder mehrere Clustertypen eingeben, getrennt mit Komma, ohne Leerzeichen, z.B. 'encircled,not_convex'");
+        System.out.println("Einen oder mehrere Clustertypen eingeben, getrennt" +
+                " mit Komma, ohne Leerzeichen, z.B. 'encircled,not_convex'");
         String input = console.readLine();
         String types[] = input.split(",");
         String filter = "";

@@ -24,7 +24,8 @@
 :take_parameter     a           rdf:predicate,
                                 :Algo-property;
                     dc:title    "take_parameter";
-                    :has_values ( :neighborhood_size :bandwidth :num_clusters :damping :sample_preference :linkage_type :distance ).
+                    :has_values ( :neighborhood_size :bandwidth :num_clusters
+                                  :damping :sample_preference :linkage_type :distance ).
 
 :can_cluster        a           rdf:predicate,
                                 :Algo-property;

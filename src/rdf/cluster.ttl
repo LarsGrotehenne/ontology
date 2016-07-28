@@ -215,7 +215,7 @@
         rdfs:label      "Agglomerative";
         :described:in   :paper16;
         :properties     [
-                        :multi_dim
+                        :has_property   (:multi_dim);
                         :take_parameter (:num_clusters
                                          :sample_preference
                                          :linkage_type
